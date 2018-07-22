@@ -1,12 +1,13 @@
 module.exports = {
-  entry: './main.jsx',
+  entry: ['./main.jsx','./boot.js'],
+  // entry: ['./boot.js'],
   output: {
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js|jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
